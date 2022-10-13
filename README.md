@@ -1,6 +1,6 @@
 # rangeset-exec
 
-The rangeset-exec tool can generate CLI command strings and also execute such commands with [clustershell](https://clustershell.readthedocs.io/en/latest/) [RangeSet](https://clustershell.readthedocs.io/en/latest/api/RangeSet.html) support for decimal and hexadecimal numbers.  
+The rangeset-exec tool written in pure Python3 can generate CLI command strings and also execute such commands with [clustershell](https://clustershell.readthedocs.io/en/latest/) [RangeSet](https://clustershell.readthedocs.io/en/latest/api/RangeSet.html) support for decimal and hexadecimal numbers.  
 Range sets with hexadecimal numbers must be specified with preleading `0x` or `0X`.
 
 To specify the range set to be used a placeholder must be specified in the command string with `{0}`.  

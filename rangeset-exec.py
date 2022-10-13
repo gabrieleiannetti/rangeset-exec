@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright 2021 Gabriele Iannetti <g.iannetti@gsi.de>
+# Copyright 2022 Gabriele Iannetti <g.iannetti@gsi.de>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,8 +16,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
-
-# TODO: Notes...
+# --------------------------------------------------------------------------
+# Specific rangeset-exec code is located after the Cluster range set module.
+# --------------------------------------------------------------------------
+#
 
 #
 # Copyright (C) 2012-2016 CEA/DAM
@@ -1445,7 +1447,7 @@ class RangeSetND(object):
         self.symmetric_difference_update(other)
         return self
 
-# Copyright 2021 Gabriele Iannetti <g.iannetti@gsi.de>
+# Copyright 2022 Gabriele Iannetti <g.iannetti@gsi.de>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -1460,6 +1462,10 @@ class RangeSetND(object):
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
+
+# ---------------------------
+# rangeset-exec specific code
+# ---------------------------
 
 import argparse
 import logging
