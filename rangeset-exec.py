@@ -1498,7 +1498,7 @@ def init_arg_parser():
                         required=False,
                         type=str,
                         default='{:04x}',
-                        help="Specify Python string format to generate hex numbers (default: %(default)s)")
+                        help="Specify Python string format to generate hex output numbers (default: %(default)s)")
 
     parser.add_argument('-p',
                         '--print-mode',
@@ -1512,7 +1512,7 @@ def init_arg_parser():
                         dest='use_hex',
                         required=False,
                         action='store_true',
-                        help='Enable use of hex numbers for range set')
+                        help='Enable output number format to hex')
 
     parser.add_argument('-v',
                         '--version',

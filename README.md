@@ -6,7 +6,7 @@ Range sets with hexadecimal numbers must be specified with preleading `0x` or `0
 To specify the range set to be used a placeholder must be specified in the command string with `{0}`.  
 Currently only one placeholder is supported.
 
-## Options
+## Usage and Options
 
 ```
 usage: rangeset-exec.py [-h] -c CMD -r RANGESET [-f FORMAT_HEX] [-p] [-x] [-v]
@@ -20,9 +20,9 @@ options:
   -r RANGESET, --rangeset RANGESET
                         Specify decimal or hexadecimal range set e.g. '0-10,27-45,60-100/2' or '0x00ab,0x00cd-0x00ff'
   -f FORMAT_HEX, --format-hex FORMAT_HEX
-                        Specify Python string format to generate hex numbers (default: {:04x})
+                        Specify Python string format to generate hex output numbers (default: {:04x})
   -p, --print-mode      Enable print mode to show commands generated
-  -x, --use-hex         Enable use of hex numbers for range set
+  -x, --use-hex         Enable output number format to hex
   -v, --version         show program's version number and exit
 ```
 
@@ -33,7 +33,7 @@ options:
 **Decimal**
 
 ```bash
-$ ./rangeset-exec.py -r '0-2,20-22,60-64/2' -c "{0}" -P
+$ ./rangeset-exec.py -r '0-2,20-22,60-64/2' -c "{0}" -p
 0
 ...
 62
@@ -43,7 +43,7 @@ $ ./rangeset-exec.py -r '0-2,20-22,60-64/2' -c "{0}" -P
 **Hexadecimal**
 
 ```bash
-$ ./rangeset-exec.py -r '0-2,20-22,60-64/2' -c "{0}" -f "0x{:08x}" -X -P 
+$ ./rangeset-exec.py -r '0-2,20-22,60-64/2' -c "{0}" -f "0x{:08x}" -x -p
 0x00000000
 ...
 0x0000003e
@@ -53,7 +53,7 @@ $ ./rangeset-exec.py -r '0-2,20-22,60-64/2' -c "{0}" -f "0x{:08x}" -X -P
 ### With LCTL Command
 
 ```bash
-$ ./rangeset-exec.py -r "0x00cd-0x00ff" -c "lctl get_param osc.hebe-OST{0}-osc-MDT0000.active" -X
+$ ./rangeset-exec.py -r "0x00cd-0x00ff" -c "lctl get_param osc.hebe-OST{0}-osc-MDT0000.active" -x
 osc.hebe-OST00cd-osc-MDT0000.active=1
 ...
 osc.hebe-OST00fe-osc-MDT0000.active=1
