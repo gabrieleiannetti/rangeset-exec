@@ -1517,7 +1517,7 @@ def init_arg_parser():
     parser.add_argument('-v',
                         '--version',
                         action='version',
-                        version=str("%(prog)s " + APP_VERSION))
+                        version=APP_VERSION)
 
     return parser.parse_args()
 
